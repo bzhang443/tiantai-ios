@@ -2,3 +2,4 @@
 .idea
 .repl_history
 build
+resources/*.storyboardc
