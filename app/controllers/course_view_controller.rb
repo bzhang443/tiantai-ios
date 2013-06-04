@@ -1,0 +1,3 @@
+class CourseViewController < UIViewController
+
+end

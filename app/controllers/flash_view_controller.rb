@@ -1,16 +1,22 @@
 class FlashViewController < UIViewController
+  #attr_accessor :window
+
   def viewDidLoad
-    # hide navigation bar
-    # or make this view the first root view, then move the to storyboard, in AppDelegate
-    # refer app_delegate+storeboard.rb in nitron.ui.extensions
-    view.animationImages = ["kaiji-1.jpg".uiimage, "kaiji-2.jpg".uiimage, "kaiji-3.jpg".uiimage]
+    view = UIImageView.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+    view.animationImages = ['kaiji-1.jpg'.uiimage, 'kaiji-2.jpg'.uiimage, 'kaiji-3.jpg'.uiimage]
     view.animationDuration = 16.0
     view.animationRepeatCount = 100
     view.startAnimating
+    self.view = view
   end
 
   def touchesBegan(touches, withEvent:event)
-    view.stopAnimating
-    self.performSegueWithIdentifier('pushHome', sender: self)
+    p "touchesBegin"
+    self.view.stopAnimating
+    #@window.tell_story
   end
+
+  #def tell_story
+  #  @window.rootViewController = storyboard.instantiateInitialViewController
+  #end
 end

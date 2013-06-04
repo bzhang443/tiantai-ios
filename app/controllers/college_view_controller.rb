@@ -1,0 +1,3 @@
+class CollegeViewController < UIViewController
+
+end

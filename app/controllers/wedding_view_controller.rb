@@ -1,0 +1,3 @@
+class WeddingViewController < UIViewController
+
+end
