@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 .repl_history
+.dat*
 build
 resources/*.storyboardc
 resources/*.momd
