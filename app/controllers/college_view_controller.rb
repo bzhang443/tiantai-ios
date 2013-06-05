@@ -1,3 +1,3 @@
-class CollegeViewController < UIViewController
+class CollegeViewController < Nitron::TableViewController
 
 end

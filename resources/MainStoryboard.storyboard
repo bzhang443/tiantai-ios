@@ -58,7 +58,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="p5m-29-nfC" kind="push" id="ORb-n4-yGX"/>
+                                    <segue destination="lqT-fG-5dE" kind="push" id="8lP-ZL-r6s"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q1Y-68-X4Y">
@@ -73,7 +73,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tsk-KV-xhA" kind="push" id="LNc-VB-X7Z"/>
+                                    <segue destination="bbB-E4-ZGB" kind="push" id="2gf-AE-MBH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,7 +137,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="q8v-U1-zEf" kind="push" id="709-xk-ZdH"/>
+                                    <segue destination="y4k-MR-oll" kind="push" id="wnn-EL-eaF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TCJ-JG-Qfv">
@@ -196,7 +196,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGq-Jm-fcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2193" y="345"/>
+            <point key="canvasLocation" x="2353" y="393"/>
         </scene>
         <!--View Controller - 地图-->
         <scene sceneID="rfw-l4-OLO">
@@ -217,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGx-qS-Ttr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432" y="574"/>
+            <point key="canvasLocation" x="1252" y="590"/>
         </scene>
         <!--View Controller - 球道攻略-->
         <scene sceneID="JOe-k6-30F">
@@ -232,116 +232,192 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ka6-fU-Kvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="-200"/>
+            <point key="canvasLocation" x="1872" y="-280"/>
         </scene>
-        <!--View Controller - 球场详情-->
-        <scene sceneID="TQe-6F-uRj">
+        <!--Course Detail View Controller - 球场详情-->
+        <scene sceneID="i8E-yx-WFT">
             <objects>
-                <viewController id="q8v-U1-zEf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MAN-fr-YPM">
+                <viewController id="y4k-MR-oll" customClass="CourseDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cOv-Cy-26L">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" maximumZoomScale="4" id="myu-Tj-pTv">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="7Df-S6-BAf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="508"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="course-view-1.jpg" id="g3l-S9-Va5">
+                                        <rect key="frame" x="12" y="11" width="288" height="105"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="course-view-2.jpg" id="4wu-SO-Jfa">
+                                        <rect key="frame" x="12" y="288" width="288" height="105"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OO1-SS-Mg8">
-                                        <rect key="frame" x="15" y="143" width="301" height="137"/>
+                                        <rect key="frame" x="6" y="125" width="301" height="137"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">天泰温泉高尔夫俱乐部位于青岛即墨温泉旅游度假区，东临黄海，南依崂山，依山傍海，风景秀丽，是国家 AAAA级旅游度假区。距青岛市中心及机场仅30分钟车程，交通非常便利。集高尔夫球场、练习场、天然海水温泉、乐活酒店、餐饮、商务会议、滑雪场等为一 体的大型旅游度假项目。天泰温泉高尔夫球场是地区内唯一的具有典型山地特色的球场。 整个球场按27洞108杆的国际标准规划。整个球道共分为Oak Valley、Maple Leaves Lake Cypress Spring三个部分。</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="course-view-2.jpg" id="dvb-Hn-sp5">
-                                        <rect key="frame" x="10" y="15" width="301" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="背倚葱浓叠翠的四舍山，毗邻清澈迷人的小镜湖，犹如身临湖光山色、四季如画的丛林乐园中。 落差近40米的球道，依山造势，磅礴如宏，自然丘陵、沟壑等天然障碍与高尔夫运动精髓的充分融合。" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0iv-hV-c4d">
-                                        <rect key="frame" x="10" y="415" width="301" height="67"/>
+                                        <rect key="frame" x="6" y="401" width="301" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="course-view-1.jpg" id="BjH-9h-hmH">
-                                        <rect key="frame" x="10" y="287" width="301" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="球场详情" id="2eK-E6-qVw"/>
+                    <navigationItem key="navigationItem" title="球场详情" id="xRV-ZV-evI"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="scroller" destination="7Df-S6-BAf" id="SRc-d8-hfZ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LmI-dJ-u6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xac-X9-uP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352" y="-558"/>
+            <point key="canvasLocation" x="1257" y="-610"/>
         </scene>
         <!--College View Controller - 学院简介-->
-        <scene sceneID="ngQ-j6-PPg">
+        <scene sceneID="P88-p5-pqG">
             <objects>
-                <viewController id="p5m-29-nfC" customClass="CollegeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hGx-5y-yXg">
+                <tableViewController id="lqT-fG-5dE" customClass="CollegeViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="u84-gn-JAb">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="学院简介" id="U8u-tL-Tei"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="boz-fC-8Dj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HDW-Zz-W64">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lqT-fG-5dE" id="cNc-hi-kiZ"/>
+                            <outlet property="delegate" destination="lqT-fG-5dE" id="iPl-CR-gEK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="学院简介" id="SXG-8T-BJm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3L-RJ-LKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722" y="-724"/>
+            <point key="canvasLocation" x="685" y="-684"/>
         </scene>
-        <!--Wedding View Controller - 婚礼简介-->
-        <scene sceneID="Fj7-c2-WIj">
+        <!--Wedding View Controller - 高尔夫婚礼-->
+        <scene sceneID="cQr-ik-5lj">
             <objects>
-                <viewController id="tsk-KV-xhA" customClass="WeddingViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PJb-YR-zZ7">
+                <viewController id="bbB-E4-ZGB" customClass="WeddingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m8L-KD-Q8M">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="WbX-4X-Cl4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="RHu-k5-qLM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wedding-1.jpg" id="xBP-v1-V56">
-                                        <rect key="frame" x="20" y="20" width="280" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wedding-1.jpg" id="NLb-G3-Ohx">
+                                        <rect key="frame" x="11" y="13" width="299" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wedding-2.jpg" id="K5k-ju-sgE">
-                                        <rect key="frame" x="20" y="244" width="280" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wedding-2.jpg" id="wu1-9Q-PRw">
+                                        <rect key="frame" x="11" y="265" width="299" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wedding-3.jpg" id="Gfk-sO-ICQ">
-                                        <rect key="frame" x="20" y="304" width="280" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wedding-3.jpg" id="Ps2-tJ-LbW">
+                                        <rect key="frame" x="11" y="609" width="299" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wedding-4.jpg" id="Yym-k5-xsH">
-                                        <rect key="frame" x="20" y="364" width="280" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wedding-4.jpg" id="1hC-vC-AKq">
+                                        <rect key="frame" x="11" y="1109" width="299" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1mB-zS-iXV">
-                                        <rect key="frame" x="14" y="148" width="300" height="88"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="oIy-NE-NPy">
+                                        <rect key="frame" x="11" y="149" width="299" height="106"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">在您与您的伴侣决定承诺彼此后,婚礼场地的选择将是另一个最重要的决定... ...
-天泰得天独厚的自然环境与绝佳的地理位置为您打造一个完美高雅的婚礼相信它会成为您生命中最重要的时刻</string>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <string key="text">在您与您的伴侣决定承诺彼此后,婚礼场地的选择将是另一个最重要的决定......
+天泰得天独厚的自然环境与绝佳的地理位置为您打造一个完美高雅的婚礼相信它会成为您生命中 最重要的时</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="QaO-U5-hNT">
+                                        <rect key="frame" x="11" y="395" width="299" height="214"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <string key="text">·	经典室内婚礼
+充满自然情致的室内婚礼是最理想的冬季婚礼场所，简单的创意却能使您的婚宴显得尤为出众，更寓意着爱情的单纯美好
+·	高尔夫球场婚礼
+天泰美丽的高尔夫球场供您选择，选择您自己的私人独特的高尔夫婚礼...			
+迷你三杆洞婚礼
+·	罗曼蒂克晚餐
+·	甜蜜温馨蜜月套房
+舒适温馨的蜜月套房，让蜜月的浪漫尽情蔓延
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="iAe-OV-Jc0">
+                                        <rect key="frame" x="11" y="739" width="299" height="362"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <string key="text">2013年婚宴价格
+· 经典室内      
+  每位人民币169元起  
+· 浪漫球场（自助午餐）
+  迷你球场    每位人民币298元
+  高尔夫球场    每位人民币398元
+以上价格需加收15%服务费
+
+2013年婚宴特别附送（至少100位嘉宾）
+· 免费享用天泰温泉高尔夫球场和草坪作为婚礼拍照场地
+· 结婚仪式上，赠送一瓶精选香槟
+· 对于已担保的每桌酒席，赠送一瓶精选葡萄酒
+· 豪华蜜月房一晚
+· 天泰婚典蛋糕
+· 天泰双人浪漫晚餐
+· 专门设计定制的请柬
+· 自带软饮、鲜榨果汁和中国茶免收开瓶费
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="kiC-bk-aSJ">
+                                        <rect key="frame" x="11" y="1239" width="299" height="215"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <string key="text">天泰的美食精致可口，提供品种多样的婚宴美食，
+    为了使您的婚宴备具特色，我们诚挚邀请您和您的朋友来天泰与我们一起来订制属于您的个性化菜单。
+    为了确保您的梦想能成为现实，我们敬业以及经验丰富的海外团队将全程与您一起，您完全不必为婚礼的细节所担忧，因为所有的细节都不会被忽略。
+    您的婚礼对我们非常重要，我们保证您的婚礼将是当日唯一的婚礼，你们是最宝贵的。
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="婚礼简介" id="ARa-2v-ztz"/>
+                    <navigationItem key="navigationItem" title="高尔夫婚礼" id="g07-Zl-WNI"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="scroller" destination="RHu-k5-qLM" id="DKF-FO-Fqc"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-Tx-9KZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iAb-Da-Z44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722" y="795"/>
+            <point key="canvasLocation" x="675" y="762"/>
         </scene>
     </scenes>
     <resources>
@@ -362,8 +438,20 @@
         <image name="wedding-4.jpg" width="525" height="192"/>
     </resources>
     <classes>
+        <class className="CourseDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CourseDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
         <class className="HomeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+        </class>
+        <class className="WeddingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WeddingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
