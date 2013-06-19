@@ -8,10 +8,11 @@ Bundler.require
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
-  app.name = '天泰温泉'
+  app.name = 'TianTai'
   app.icons = %w(Icon.png Icon@2x.png)
   app.version = '1.0'
   app.deployment_target = '6.0'
+  app.info_plist['CFBundleDisplayName'] = '天泰温泉'
 
   app.pods do
     pod 'Reachability'
