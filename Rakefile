@@ -11,7 +11,7 @@ Motion::Project::App.setup do |app|
   app.name = 'TianTai'
   app.icons = %w(Icon.png Icon@2x.png)
   app.version = '1.0'
-  app.deployment_target = '6.0'
+  app.deployment_target = '6.1'
   app.info_plist['CFBundleDisplayName'] = '天泰温泉'
 
   app.pods do
