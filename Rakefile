@@ -16,9 +16,8 @@ Motion::Project::App.setup do |app|
 
   app.pods do
     pod 'Reachability'
-    pod 'SDWebImage'
-    pod 'MBProgressHUD'
     pod 'SVPullToRefresh'
+    pod 'QuadCurveMenu'
   end
 
   app.provisioning_profile = 'team.mobileprovision'

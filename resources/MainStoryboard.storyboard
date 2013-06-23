@@ -65,7 +65,7 @@
                                     <segue destination="lqT-fG-5dE" kind="push" id="8lP-ZL-r6s"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q1Y-68-X4Y">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q1Y-68-X4Y">
                                 <rect key="frame" x="11" y="247" width="289" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -83,7 +83,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="天泰温泉高尔夫俱乐部" id="5Zi-Qz-qV4"/>
+                    <navigationItem key="navigationItem" title="天泰温泉高尔夫俱乐部" id="5Zi-Qz-qV4">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="WVl-lq-HBd"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlY-NC-feT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +170,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="球场简介" id="8UT-cz-iaU"/>
+                    <navigationItem key="navigationItem" title="球场简介" id="8UT-cz-iaU">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="RO2-uH-OfX"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycs-FH-jpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
