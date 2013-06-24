@@ -179,25 +179,41 @@
             </objects>
             <point key="canvasLocation" x="965" y="2429"/>
         </scene>
-        <!--Table View Controller - 球场动态-->
+        <!--News View Controller - 球场动态-->
         <scene sceneID="D3y-cG-yU1">
             <objects>
-                <tableViewController id="c4m-Hg-Dlp" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vq9-v7-JpL">
+                <tableViewController id="c4m-Hg-Dlp" customClass="NewsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" id="vq9-v7-JpL">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jYi-vk-SDP">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsCell" rowHeight="116" id="jYi-vk-SDP">
+                                <rect key="frame" x="0.0" y="22" width="320" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nGJ-G1-xra">
+                                            <rect key="frame" x="100" y="42" width="169" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="dataBinding" value="model.title"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="海水温泉.png" id="J7Y-5X-qCI">
+                                            <rect key="frame" x="9" y="20" width="83" height="75"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="VTN-V1-kDf" kind="push" id="rcT-Bh-MH6"/>
+                                    <segue destination="NJQ-qt-YBy" kind="push" id="kPZ-It-uvT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -206,11 +222,13 @@
                             <outlet property="delegate" destination="c4m-Hg-Dlp" id="424-mT-2wa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="球场动态" id="bck-kT-vs5"/>
+                    <navigationItem key="navigationItem" title="球场动态" id="bck-kT-vs5">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="go9-hV-Wc7"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euo-RN-udM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="643" y="1615"/>
+            <point key="canvasLocation" x="235" y="-1421"/>
         </scene>
         <!--View Controller - 订场-->
         <scene sceneID="d5m-NA-CFV">
@@ -504,7 +522,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="天泰温泉高尔夫俱乐部" id="5Zi-Qz-qV4">
-                        <barButtonItem key="backBarButtonItem" title="返回" id="WVl-lq-HBd"/>
+                        <barButtonItem key="backBarButtonItem" title="返回" style="plain" id="WVl-lq-HBd"/>
                     </navigationItem>
                     <connections>
                         <segue destination="1ng-JC-Xx5" kind="push" identifier="ShowSetting" id="Rhh-eG-fKq"/>
@@ -603,23 +621,52 @@
             </objects>
             <point key="canvasLocation" x="714" y="54"/>
         </scene>
-        <!--Table View Controller - 配套设施-->
+        <!--Facility View Controller - 配套设施-->
         <scene sceneID="35U-Wh-y9l">
             <objects>
-                <tableViewController id="I1V-D4-NBR" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vvR-qp-vlw">
+                <tableViewController id="I1V-D4-NBR" customClass="FacilityViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="108" sectionHeaderHeight="22" sectionFooterHeight="22" id="vvR-qp-vlw">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gnC-4a-asY">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FacilityCell" rowHeight="108" id="gnC-4a-asY">
+                                <rect key="frame" x="0.0" y="22" width="320" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="海水温泉.png" id="HGf-fL-lq6">
+                                            <rect key="frame" x="11" y="12" width="87" height="83"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5hy-3a-VVi">
+                                            <rect key="frame" x="115" y="12" width="185" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="dataBinding" value="model.title"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="intro" lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jah-rQ-Urt">
+                                            <rect key="frame" x="115" y="43" width="185" height="52"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="dataBinding" value="model.intro"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="NJQ-qt-YBy" kind="push" id="Cmc-pf-IpL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -627,11 +674,13 @@
                             <outlet property="delegate" destination="I1V-D4-NBR" id="cki-gS-5Ma"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="配套设施" id="Hnd-Ms-fhj"/>
+                    <navigationItem key="navigationItem" title="配套设施" id="Hnd-Ms-fhj">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="Y0w-Lt-DMg"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGq-Jm-fcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3145" y="769"/>
+            <point key="canvasLocation" x="1424" y="-732"/>
         </scene>
         <!--View Controller - 地图-->
         <scene sceneID="rfw-l4-OLO">
@@ -652,7 +701,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGx-qS-Ttr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2036" y="870"/>
+            <point key="canvasLocation" x="1468" y="798"/>
         </scene>
         <!--Tips View Controller - 球道攻略-->
         <scene sceneID="JOe-k6-30F">
@@ -667,7 +716,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ka6-fU-Kvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2656" y="120"/>
+            <point key="canvasLocation" x="1892" y="60"/>
         </scene>
         <!--Course Detail View Controller - 球场详情-->
         <scene sceneID="i8E-yx-WFT">
@@ -723,7 +772,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xac-X9-uP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137" y="-394"/>
+            <point key="canvasLocation" x="2277" y="670"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="DCl-Nl-S6U">
@@ -738,7 +787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgc-Da-amn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1460" y="-732"/>
+            <point key="canvasLocation" x="1310" y="-1496"/>
         </scene>
         <!--College View Controller - 学院简介-->
         <scene sceneID="P88-p5-pqG">
@@ -770,7 +819,9 @@
                             <outlet property="delegate" destination="lqT-fG-5dE" id="iPl-CR-gEK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="学院简介" id="SXG-8T-BJm"/>
+                    <navigationItem key="navigationItem" title="学院简介" id="SXG-8T-BJm">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="4fy-zg-ITf"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3L-RJ-LKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -825,28 +876,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d16-K5-ppR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1714" y="2854"/>
-        </scene>
-        <!--View Controller - 新闻动态详情-->
-        <scene sceneID="CXr-rZ-16I">
-            <objects>
-                <viewController id="VTN-V1-kDf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jaB-1V-AfY">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" id="9OH-Xf-1CB">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="新闻动态详情" id="jLf-4O-2Wl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3y2-4j-ehC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1183" y="1621"/>
         </scene>
         <!--Table View Controller - 订单查询-->
         <scene sceneID="R2u-lK-XhG">
@@ -1245,6 +1274,7 @@
         <image name="wedding-2.jpg" width="525" height="192"/>
         <image name="wedding-3.jpg" width="525" height="192"/>
         <image name="wedding-4.jpg" width="525" height="192"/>
+        <image name="海水温泉.png" width="132" height="132"/>
     </resources>
     <classes>
         <class className="CourseDetailViewController" superclassName="UIViewController">
@@ -1270,5 +1300,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="kDN-v8-vjI"/>
+        <segue reference="kPZ-It-uvT"/>
     </inferredMetricsTieBreakers>
 </document>

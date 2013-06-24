@@ -3,11 +3,11 @@ class HomeViewController < UIViewController
   HALF_PI = 1.57079632679489661923132169163975144
 
   def viewDidLoad
-    self.navigationController.navigationBar.setBackgroundImage('top.png'.uiimage, forBarMetrics:UIBarMetricsDefault)
+    self.navigationController.navigationBar.setBackgroundImage('top'.uiimage, forBarMetrics:UIBarMetricsDefault)
     #UIBarButtonItem.appearance.setBackButtonBackgroundImage('navi_back.png'.uiimage, forState: UIControlStateNormal, barMetrics: UIBarMetricsDefault)
     #UIBarButtonItem.appearance.setTitle('返回')
-    menu_y = self.view.bounds.size.height - 230
-    @menu = QuadCurveMenu.alloc.initWithFrame([[150,menu_y],[210,210]], withArray:['1', '2', '3'])
+    menu_y = self.view.bounds.size.height - 210
+    @menu = QuadCurveMenu.alloc.initWithFrame([[160,menu_y],[210,210]], withArray:['1', '2', '3'])
     dir = QuadCurveRadialDirector.alloc.initWithMenuWholeAngle(HALF_PI, andInitialRotation:-1*HALF_PI)
     dir.endRadius = 100
     @menu.setMenuDirector(dir)
