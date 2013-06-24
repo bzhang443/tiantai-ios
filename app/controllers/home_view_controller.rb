@@ -27,12 +27,15 @@ class HomeViewController < UIViewController
   end
 
   def quadCurveMenu(menu, didTapMenuItem: item)
-    puts "MenuItem tapped: #{item.dataObject}"
     case item.dataObject
       when '1'  #setting
-        self.performSegueWithIdentifier('ShowProfile', sender: self)
+        self.performSegueWithIdentifier('ShowSetting', sender: self)
+      when '2'
+        self.performSegueWithIdentifier('ShowBooking', sender: self)
+      when '3'
+        self.performSegueWithIdentifier('ShowNews', sender: self)
       else
-        puts 'not implemented yet'
+        puts "What for #{item.dataObject}?"
     end
   end
 

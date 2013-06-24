@@ -1,0 +1,3 @@
+class SettingViewController < UIViewController
+
+end
