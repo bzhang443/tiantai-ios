@@ -86,10 +86,13 @@
                     <navigationItem key="navigationItem" title="天泰温泉高尔夫俱乐部" id="5Zi-Qz-qV4">
                         <barButtonItem key="backBarButtonItem" title="返回" id="WVl-lq-HBd"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="4aq-B1-FdO" kind="push" identifier="ShowProfile" id="abS-F3-c8R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlY-NC-feT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84" y="54"/>
+            <point key="canvasLocation" x="84" y="70"/>
         </scene>
         <!--Course View Controller - 球场简介-->
         <scene sceneID="2Y0-mb-5rK">
@@ -351,6 +354,101 @@
             </objects>
             <point key="canvasLocation" x="685" y="-684"/>
         </scene>
+        <!--Profile View Controller - 个人信息编辑-->
+        <scene sceneID="TSx-mc-pIS">
+            <objects>
+                <viewController id="4aq-B1-FdO" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="72W-5i-cdP">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="backgroud.png" id="mAb-IM-v6v">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile-bg.png" id="ste-P5-LGd">
+                                <rect key="frame" x="10" y="29" width="300" height="411"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile-tel.jpg" id="SZI-9m-SMW">
+                                <rect key="frame" x="20" y="143" width="36" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="联系电话" minimumFontSize="17" id="ffY-6t-JUs">
+                                <rect key="frame" x="64" y="143" width="160" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile-company.jpg" id="wZI-K8-9HL">
+                                <rect key="frame" x="20" y="192" width="36" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="公司" minimumFontSize="17" id="dCK-lX-byv">
+                                <rect key="frame" x="64" y="192" width="160" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile-job.jpg" id="rih-6e-ISj">
+                                <rect key="frame" x="20" y="241" width="36" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="职位" minimumFontSize="17" id="Q9h-pC-YRo">
+                                <rect key="frame" x="64" y="241" width="160" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile-handicap.jpg" id="6lw-qW-bWz">
+                                <rect key="frame" x="20" y="294" width="36" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="差点" minimumFontSize="17" id="MdZ-eT-NJq">
+                                <rect key="frame" x="64" y="294" width="160" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile-name.jpg" id="OPA-0m-IEg">
+                                <rect key="frame" x="20" y="58" width="36" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile-male.jpg" id="Wke-BF-FUM">
+                                <rect key="frame" x="20" y="100" width="36" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile-female-off.jpg" id="lGU-mL-xUg">
+                                <rect key="frame" x="64" y="101" width="36" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="姓名" minimumFontSize="17" id="dht-c4-haw">
+                                <rect key="frame" x="64" y="58" width="160" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4qS-vf-vA2">
+                                <rect key="frame" x="237" y="348" width="73" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="profile-commit.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人信息编辑" id="i6V-6B-nNg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gfe-yU-dRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40" y="870"/>
+        </scene>
         <!--Wedding View Controller - 高尔夫婚礼-->
         <scene sceneID="cQr-ik-5lj">
             <objects>
@@ -475,6 +573,15 @@
         <image name="home-2.png" width="583" height="138"/>
         <image name="home-3.png" width="583" height="138"/>
         <image name="map.png" width="163" height="58"/>
+        <image name="profile-bg.png" width="601" height="624"/>
+        <image name="profile-commit.png" width="101" height="45"/>
+        <image name="profile-company.jpg" width="42" height="42"/>
+        <image name="profile-female-off.jpg" width="42" height="42"/>
+        <image name="profile-handicap.jpg" width="42" height="42"/>
+        <image name="profile-job.jpg" width="42" height="42"/>
+        <image name="profile-male.jpg" width="42" height="42"/>
+        <image name="profile-name.jpg" width="42" height="42"/>
+        <image name="profile-tel.jpg" width="42" height="42"/>
         <image name="wedding-1.jpg" width="525" height="192"/>
         <image name="wedding-2.jpg" width="525" height="192"/>
         <image name="wedding-3.jpg" width="525" height="192"/>
