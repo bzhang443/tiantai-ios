@@ -1,6 +1,5 @@
 class College < Nitron::Model
-  #API_HOST = "http://192.168.1.30:3000"
-  API_HOST = "http://localhost:3000"
+  API_HOST = "http://125.208.5.139:3000"
 
   def self.all
     order('title')
