@@ -8,6 +8,11 @@ class FacilityViewController < Nitron::TableViewController
       Facility.refresh
       view.pullToRefreshView.stopAnimating
     })
+
+    unless Facility.first
+      puts 'No data, pull to refresh...'
+      view.triggerPullToRefresh
+    end
   end
 
 end

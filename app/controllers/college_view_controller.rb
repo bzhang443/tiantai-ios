@@ -8,6 +8,11 @@ class CollegeViewController < Nitron::TableViewController
       College.refresh
       view.pullToRefreshView.stopAnimating
     })
+
+    unless College.first
+      puts 'No data, pull to refresh...'
+      view.triggerPullToRefresh
+    end
   end
 
 end

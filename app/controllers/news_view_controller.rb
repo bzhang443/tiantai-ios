@@ -8,6 +8,11 @@ class NewsViewController < Nitron::TableViewController
       News.refresh
       view.pullToRefreshView.stopAnimating
     })
+
+    unless News.first
+      puts 'No data, pull to refresh...'
+      view.triggerPullToRefresh
+    end
   end
 
 end
