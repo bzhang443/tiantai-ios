@@ -1,5 +1,4 @@
 class College < Nitron::Model
-  API_HOST = "http://125.208.5.139:3000"
 
   def self.all
     order('title')
@@ -7,16 +6,16 @@ class College < Nitron::Model
 
   def self.refresh
     unless App.delegate.network_reachable?
-      p 'College: network UN-reachable'
+      App.delegate.network_error_report
       return
     end
 
-    BW::HTTP.get("#{API_HOST}/api/college_list") do |response|
+    BW::HTTP.get(App.delegate.api_for('college_list')) do |response|
       if response.ok?
         self.all.to_a.each { |record| record.destroy }
         json = BW::JSON.parse(response.body.to_str)
         if json[:status] != 0
-          p 'College: status>0'
+          App.alert json[:message]
           return
         end
         json[:list].each { |record|
@@ -24,7 +23,7 @@ class College < Nitron::Model
           College.create(data)
         }
       else
-        p 'API not working'
+        App.delegate.api_error_report
       end
     end
   end
