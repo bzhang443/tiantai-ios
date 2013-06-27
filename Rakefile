@@ -18,6 +18,8 @@ Motion::Project::App.setup do |app|
     pod 'Reachability'
     pod 'SVPullToRefresh'
     pod 'QuadCurveMenu'
+    #pod 'UIKitHelper'
+    pod 'TPKeyboardAvoiding'
   end
 
   app.provisioning_profile = 'team.mobileprovision'
