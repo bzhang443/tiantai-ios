@@ -20,6 +20,32 @@ class Profile
     App::Persistence['company']  = p.company  if p.company
     App::Persistence['title']    = p.title    if p.title
     App::Persistence['handicap'] = p.handicap if p.handicap
+
+    #App.delegate.api_call('post', 'user_config', data) {}
+
+    unless App.delegate.network_reachable?
+      App.delegate.network_error_report
+      return
+    end
+    data = {:token=> App::Persistence['token'],
+            :name=>p.name,
+            :gender=>p.gender,
+            :mobile=>p.mobile,
+            :company=>p.company,
+            :title=>p.title,
+            :handicap=>p.handicap
+    }
+    BW::HTTP.post(App.delegate.api_for('user_config'), {payload: data}) do |response|
+      if response.ok?
+        json = BW::JSON.parse(response.body.to_str)
+        if json[:status] != 0
+          App.alert json[:message]
+          return
+        end
+      else
+        App.delegate.api_error_report
+      end
+    end
   end
 
   def self.setup(token)
