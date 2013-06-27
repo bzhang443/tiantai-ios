@@ -27,7 +27,4 @@ class Profile
     ! App::Persistence['token'].nil?
   end
 
-  def gender
-    @gender || '男'
-  end
 end
