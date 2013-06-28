@@ -4,7 +4,6 @@ class HomeViewController < UIViewController
 
   def viewDidLoad
     super
-    Profile.device_signup
 
     menu_y = self.view.bounds.size.height - 210
     @menu = QuadCurveMenu.alloc.initWithFrame([[160,menu_y],[210,210]], withArray:['1', '2', '3'])

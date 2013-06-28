@@ -10,7 +10,7 @@ class NewsViewController < Nitron::TableViewController
     })
 
     unless News.first
-      puts 'No data, pull to refresh...'
+      puts 'No news data, pull to refresh...'
       view.triggerPullToRefresh
     end
   end

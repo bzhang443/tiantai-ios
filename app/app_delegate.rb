@@ -1,6 +1,7 @@
 include SugarCube::Adjust
 
 class AppDelegate
+  include NetworkHelper
 
   #def application(application, didFinishLaunchingWithOptions:launchOptions)
   #  application.setStatusBarStyle(UIStatusBarStyleBlackOpaque)
@@ -31,18 +32,6 @@ class AppDelegate
 
   def network_reachable?
     @hostReachable.isReachable
-  end
-
-  def api_for(service)
-    "http://125.208.5.139:3000/api/#{service}"
-  end
-
-  def network_error_report
-    App.alert "网络不好，请稍后再试"
-  end
-
-  def api_error_report
-    App.alert "服务器故障，请稍后再试"
   end
 
 end

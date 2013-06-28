@@ -10,7 +10,7 @@ class FacilityViewController < Nitron::TableViewController
     })
 
     unless Facility.first
-      puts 'No data, pull to refresh...'
+      puts 'No facility data, pull to refresh...'
       view.triggerPullToRefresh
     end
   end

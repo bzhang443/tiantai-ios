@@ -10,7 +10,7 @@ class CollegeViewController < Nitron::TableViewController
     })
 
     unless College.first
-      puts 'No data, pull to refresh...'
+      puts 'No college data, pull to refresh...'
       view.triggerPullToRefresh
     end
   end
