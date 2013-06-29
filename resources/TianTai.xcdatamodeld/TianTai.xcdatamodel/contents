@@ -16,9 +16,15 @@
         <attribute name="logo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Price" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="College" positionX="160" positionY="192" width="128" height="75"/>
         <element name="Facility" positionX="160" positionY="192" width="128" height="105"/>
         <element name="News" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Price" positionX="160" positionY="192" width="128" height="90"/>
     </elements>
 </model>
