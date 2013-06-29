@@ -35,9 +35,8 @@ class Profile
     end
   end
 
-  def self.device_token
-    token = App::Persistence['token']
-    return token if token
+  def self.device_signup
+    return if App::Persistence['token']
 
     device_model = 'iphone' if Device.iphone?
     device_model = 'ipad' if Device.ipad?
@@ -51,13 +50,12 @@ class Profile
       if response.ok?
         json = BW::JSON.parse(response.body.to_str)
         if json[:status] == 0
-          token = json[:token]
-          App::Persistence['token'] = token
-          puts "device token assigned: #{token}"
+          App::Persistence['token'] = json[:token]
+          puts "device token assigned: #{json[:token]}"
         end
+      else
+        App.alert '网络差劲，设备同步失败'
       end
     end
-
-    App::Persistence['token']
   end
 end

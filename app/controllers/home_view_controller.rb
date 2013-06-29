@@ -15,6 +15,8 @@ class HomeViewController < UIViewController
     @menu.setMenuItemFactory(self)
     self.view.addSubview @menu
     @menu.delegate = self
+
+    Profile.device_signup
   end
 
   IMGS = {'1'=>'menu-setting', '2'=>'menu-book', '3'=>'menu-event'}

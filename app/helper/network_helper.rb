@@ -17,14 +17,7 @@ module NetworkHelper
       return
     end
 
-    #token = Profile.device_token
-    #unless token
-    #  puts 'token not saved yet?'
-    #  App.alert '设备注册失败，请稍后再试'
-    #  #return
-    #end
-
-    puts "api_call with service=#{service}, method=#{method}, payload=#{payload}, handler=#{handler}"
+    #puts "api_call with service=#{service}, method=#{method}, payload=#{payload}, handler=#{handler}"
     url = api_for(service)
     if method == 'post'
       BW::HTTP.post(url, {payload: payload}) do |response|
