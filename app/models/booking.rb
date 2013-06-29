@@ -16,17 +16,28 @@ class Booking < Nitron::Model
   end
 
   def self.all
-    order('id')
+    order('order_id')
   end
 
   def self.refresh
-    App.delegate.api_get('booking_history') do |json|
+    App.delegate.api_get("booking_history?token=#{Profile.token}") do |json|
       self.all.to_a.each { |record| record.destroy }
       json[:list].each { |record|
-        data = {:order_id=>record[:order_id], :price_name=>record[:price_name], :name=>record[:name],
-                date=>record[:date], :mobile=>record[:mobile], :friends=>record[:friends], :memo=>record[:memo]  }
+        data = {:order_id   => record[:order_id],
+                :price_name => record[:price_name],
+                :name       => record[:name],
+                :date       => record[:date],
+                :mobile     => record[:mobile],
+                :friends    => record[:friends],
+                :status     => record[:status]||'处理中',
+                :memo       => record[:memo]
+        }
         Booking.create(data)
       }
     end
+  end
+
+  def friends
+    primitiveValueForKey(:friends).stringValue
   end
 end
