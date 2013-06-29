@@ -1,16 +1,19 @@
 PODS:
+  - CEPopupPickerView (0.1)
   - QuadCurveMenu (0.0.1)
   - Reachability (3.1.0)
   - SVPullToRefresh (0.4.1)
   - TPKeyboardAvoiding (0.0.1)
 
 DEPENDENCIES:
+  - CEPopupPickerView
   - QuadCurveMenu
   - Reachability
   - SVPullToRefresh
   - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
+  CEPopupPickerView: 5e4eb8b0cfd28a741bcc9f38a4a13814aaba92a2
   QuadCurveMenu: 339756b3178e381fea80e424f8edc1b10af554c8
   Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
   SVPullToRefresh: 61a0e4bd12bd6f8e3465909810b0fbeb1a28d5f2

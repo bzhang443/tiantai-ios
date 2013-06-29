@@ -1,9 +1,12 @@
 class Profile
-  attr_accessor :token, :name, :gender, :mobile, :company, :title, :handicap
+  attr_accessor :name, :gender, :mobile, :company, :title, :handicap
+
+  def self.token
+    App::Persistence['token']
+  end
 
   def self.load
     p = Profile.new
-    p.token    = App::Persistence['token']
     p.name     = App::Persistence['name']
     p.gender   = App::Persistence['gender']
     p.mobile   = App::Persistence['mobile']
@@ -22,7 +25,6 @@ class Profile
     App::Persistence['handicap'] = p.handicap if p.handicap
 
     data = {
-            :token   => App::Persistence['token'],
             :name    => p.name,
             :gender  => p.gender,
             :mobile  => p.mobile,

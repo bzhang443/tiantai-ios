@@ -20,6 +20,7 @@ module NetworkHelper
     #puts "api_call with service=#{service}, method=#{method}, payload=#{payload}, handler=#{handler}"
     url = api_for(service)
     if method == 'post'
+      payload[:token] = Profile.token
       BW::HTTP.post(url, {payload: payload}) do |response|
 #        puts "http response_code: #{response.status_code}"
         if response.ok?

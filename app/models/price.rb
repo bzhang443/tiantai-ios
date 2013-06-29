@@ -13,8 +13,13 @@ class Price < Nitron::Model
   end
 
   NAMES = ['会员嘉宾平日价', '会员嘉宾假日价', '访客假日价', '访客平日价']
-  def valid_price_names
+  def self.valid_price_names
     NAMES
+  end
+
+  def self.to_id(name)
+    p = Price.find_by_name(NAMES[0])
+    return p.id
   end
 
   def member_workday

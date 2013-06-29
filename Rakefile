@@ -20,6 +20,7 @@ Motion::Project::App.setup do |app|
     pod 'QuadCurveMenu'
     #pod 'UIKitHelper'
     pod 'TPKeyboardAvoiding'
+    pod 'CEPopupPickerView'
   end
 
   app.provisioning_profile = 'team.mobileprovision'
