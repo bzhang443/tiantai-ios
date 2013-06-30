@@ -13,4 +13,12 @@ class News < Nitron::Model
     end
   end
 
+  def logo_image
+    #puts "get logo_image from #{self.logo}"
+    App.delegate.get_image(self.logo) do |image|
+      @logo_image = image
+    end
+    @logo_image || 'placeholder'.uiimage
+  end
+
 end

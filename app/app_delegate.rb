@@ -34,4 +34,23 @@ class AppDelegate
     @hostReachable.isReachable
   end
 
+  #SDWebImageManager *manager = [SDWebImageManager sharedManager];
+  #[manager downloadWithURL:imageURL
+  #                 options:0
+  #                progress:nil
+  #               completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished)
+  #                        {
+  #                            if (image)
+  #                            {
+  #                                // do something with image
+  #                            }
+  #                        }
+  # ];
+
+  def get_image(url, &block)
+    manager = SDWebImageManager.sharedManager
+    manager.downloadWithURL(url.nsurl, options:0, progress:nil,
+          completed:lambda {|image, error, type, finished| block.call(image)}
+    )
+  end
 end

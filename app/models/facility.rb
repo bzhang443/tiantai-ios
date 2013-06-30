@@ -14,4 +14,11 @@ class Facility < Nitron::Model
     end
   end
 
+  def logo_image
+    App.delegate.get_image(self.logo) do |image|
+      @logo_image = image
+    end
+    @logo_image || 'placeholder'.uiimage
+  end
+
 end
