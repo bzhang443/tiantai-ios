@@ -1,4 +1,5 @@
 class BookingViewController < Nitron::ViewController
+  DATE_FORMAT = "%m-%d %H:%M"
   def viewDidLoad
     super
     @names = Price.valid_price_names
@@ -22,7 +23,7 @@ class BookingViewController < Nitron::ViewController
 
   on :dateUpdate do
     datePanel.hide
-    dateField.text = datePicker.date.string_with_format(:ymd)
+    dateField.text = datePicker.date.string_with_format(DATE_FORMAT)
   end
 
   on :reset do
@@ -50,7 +51,7 @@ class BookingViewController < Nitron::ViewController
 private
   def form_reset
     profile = Profile.load
-    dateField.text    = NSDate.new.string_with_format(:ymd)
+    dateField.text    = NSDate.new.string_with_format(DATE_FORMAT)
     productField.text = @names[0]
     nameField.text    = profile.name
     friendsField.text = "0"
