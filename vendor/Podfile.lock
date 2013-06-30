@@ -1,5 +1,6 @@
 PODS:
   - CEPopupPickerView (0.1)
+  - ISPageScrollView (0.0.2)
   - libwebp (0.3.0-rc7):
     - libwebp/dec
     - libwebp/dsp
@@ -22,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - CEPopupPickerView
+  - ISPageScrollView
   - MBProgressHUD
   - QuadCurveMenu
   - Reachability
@@ -31,6 +33,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   CEPopupPickerView: 5e4eb8b0cfd28a741bcc9f38a4a13814aaba92a2
+  ISPageScrollView: c612fe70f7bf4f25a7475e894dd9ee258352fd4f
   libwebp: 40517fa1fd3716eded73b4696c45fc0b66e4b414
   MBProgressHUD: 1fd8591a2216d5dec6de24e09187bb03bcbe9946
   QuadCurveMenu: 339756b3178e381fea80e424f8edc1b10af554c8

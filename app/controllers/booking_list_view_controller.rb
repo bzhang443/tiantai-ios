@@ -11,7 +11,7 @@ class BookingListViewController < Nitron::TableViewController
 
     #unless Booking.first
     #  puts 'No college data, pull to refresh...'
-    #  view.triggerPullToRefresh
+      view.triggerPullToRefresh
     #end
   end
 

@@ -18,7 +18,7 @@ Motion::Project::App.setup do |app|
     pod 'Reachability'
     pod 'SVPullToRefresh'
     pod 'QuadCurveMenu'
-    #pod 'UIKitHelper'
+    pod 'ISPageScrollView'
     pod 'TPKeyboardAvoiding'
     pod 'CEPopupPickerView'
     pod 'SDWebImage'

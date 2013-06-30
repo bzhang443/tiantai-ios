@@ -28,12 +28,24 @@ class TipsViewController < UIViewController
     fw-o8.jpg
     fw-o9.jpg
   )
+
   def viewDidLoad
-    view = UIImageView.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    view.animationImages = FW_FILES.collect {|f| f.uiimage}
-    view.animationDuration = 16.0
-    view.animationRepeatCount = 100
-    view.startAnimating
+    view = ISPageScrollView.alloc.initWithFrame(self.view.bounds)
+    view.dataSource = self
+    view.numberOfPages = FW_FILES.size
+    view.numberOfReusableViews = 5
+    view.displayPage(0)
     self.view = view
   end
+
+  def viewForScrollView(scroll, Page:index)
+    bounds = self.view.bounds
+    bounds.size.height -= 44   # dirty job, eh?
+    img = UIImageView.alloc.initWithFrame(bounds)
+    img.contentMode = UIViewContentModeScaleToFill
+    img.image = FW_FILES[index].uiimage
+    img
+    #UIImageView.alloc.initWithImage(FW_FILES[index].uiimage)
+  end
+
 end
