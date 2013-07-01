@@ -5,8 +5,8 @@ class AppDelegate
 
   def application(application, didFinishLaunchingWithOptions:launchOptions)
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+    @application = application
 
-    application.setStatusBarHidden(true, withAnimation:UIStatusBarAnimationNone)
     show_flash
 
     @window.makeKeyAndVisible
@@ -15,6 +15,8 @@ class AppDelegate
   end
 
   def show_flash
+    @application.setStatusBarHidden(true, withAnimation:UIStatusBarAnimationNone)
+
     @image_view = UIImageView.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     @image_view.animationImages = ['kaiji-2.jpg'.uiimage, 'kaiji-3.jpg'.uiimage, 'kaiji-1.jpg'.uiimage]
     @image_view.animationDuration = 16.0
@@ -32,6 +34,8 @@ class AppDelegate
     @image_view.removeFromSuperview
     @image_view = nil
     @window.removeGestureRecognizer(@tap)
+
+    @application.setStatusBarHidden(false, withAnimation:UIStatusBarAnimationNone)
     @window.rootViewController = storyboard.instantiateInitialViewController
     @window.rootViewController.wantsFullScreenLayout = true
   end
@@ -60,19 +64,6 @@ class AppDelegate
   def network_reachable?
     @hostReachable.isReachable
   end
-
-  #SDWebImageManager *manager = [SDWebImageManager sharedManager];
-  #[manager downloadWithURL:imageURL
-  #                 options:0
-  #                progress:nil
-  #               completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished)
-  #                        {
-  #                            if (image)
-  #                            {
-  #                                // do something with image
-  #                            }
-  #                        }
-  # ];
 
   def get_image(url, &block)
     manager = SDWebImageManager.sharedManager
