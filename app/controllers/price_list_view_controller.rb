@@ -15,4 +15,8 @@ class PriceListViewController <  Nitron::ViewController
     end
   end
 
+  on :callButton do
+    App.open_url 'telprompt://053286579888'
+  end
+
 end
