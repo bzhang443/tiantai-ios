@@ -696,10 +696,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-336" y="1243"/>
         </scene>
-        <!--Course View Controller - 球场简介-->
+        <!--View Controller - 球场简介-->
         <scene sceneID="2Y0-mb-5rK">
             <objects>
-                <viewController id="U0P-bR-AYt" customClass="CourseViewController" sceneMemberID="viewController">
+                <viewController id="U0P-bR-AYt" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RAm-bK-V3c">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1595,7 +1595,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kPZ-It-uvT"/>
         <segue reference="kDN-v8-vjI"/>
+        <segue reference="kPZ-It-uvT"/>
     </inferredMetricsTieBreakers>
 </document>

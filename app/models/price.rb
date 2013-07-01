@@ -18,7 +18,7 @@ class Price < Nitron::Model
   end
 
   def self.to_id(name)
-    p = Price.find_by_name(NAMES[0])
+    p = Price.find_by_name(name)
     return p.id
   end
 

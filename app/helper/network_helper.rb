@@ -17,15 +17,12 @@ module NetworkHelper
       return
     end
 
-    #puts "api_call with service=#{service}, method=#{method}, payload=#{payload}, handler=#{handler}"
     url = api_for(service)
     if method == 'post'
       payload[:token] = Profile.token
       BW::HTTP.post(url, {payload: payload}) do |response|
-#        puts "http response_code: #{response.status_code}"
         if response.ok?
           json = BW::JSON.parse(response.body.to_str)
-#          puts "json=#{json}"
           if json[:status] != 0
             App.alert json[:message]
             return
@@ -37,10 +34,8 @@ module NetworkHelper
       end
     elsif method == 'get'
       BW::HTTP.get(url) do |response|
-        #puts "http response_code: #{response.status_code}"
         if response.ok?
           json = BW::JSON.parse(response.body.to_str)
-          #puts "json=#{json}"
           if json[:status] != 0
             App.alert json[:message]
             return
