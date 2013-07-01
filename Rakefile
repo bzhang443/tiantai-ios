@@ -16,6 +16,7 @@ Motion::Project::App.setup do |app|
   app.deployment_target = '6.0'
   app.interface_orientations = [:portrait]
   app.info_plist['CFBundleDisplayName'] = '天泰温泉'
+  app.files += Dir.glob("./lib/**/*.rb")
 
   app.pods do
     pod 'Reachability'

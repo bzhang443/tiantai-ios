@@ -47,7 +47,7 @@ class Profile
     device_model += '-retina' if Device.retina?
     device_model += "(#{Device.screen.width}x#{Device.screen.height})"
     data = {
-        :did     => Device.identifierForVendor.UUIDString,
+        :did     => UIDevice.currentDevice.identifierForVendor.UUIDString,
         :model   => device_model,
         :os      => Device.ios_version,
         :version => props.app_version,
