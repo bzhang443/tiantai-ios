@@ -1121,7 +1121,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="YPI-P1-Tsm" id="xSi-lz-UEy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="订单查询" id="D7M-hx-pvc"/>
+                    <navigationItem key="navigationItem" title="订单查询" id="D7M-hx-pvc">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="Rnh-vA-LpR"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RN0-iO-Vqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

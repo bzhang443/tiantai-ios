@@ -35,18 +35,15 @@ class TipsViewController < UIViewController
 
     view = ISPageScrollView.alloc.initWithFrame(self.view.bounds)
     view.dataSource = self
-    view.numberOfPages = FW_FILES.size
+    view.numberOfPages = FW_FILES.size - 1  # buggy
     view.numberOfReusableViews = 5
     view.displayPage(0)
     self.view = view
   end
 
   def viewForScrollView(scroll, Page:index)
-    index = 0 if index >= FW_FILES.size  # bug for ISPageScrollView, index=27 requested
-
     img = UIImageView.alloc.initWithFrame(@bounds)
     img.contentMode = UIViewContentModeScaleToFill
-    #puts "#{FW_FILES[index]}.uiimage preparing..."
     img.image = FW_FILES[index].uiimage
     img
   end

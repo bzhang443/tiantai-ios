@@ -3,15 +3,42 @@ include SugarCube::Adjust
 class AppDelegate
   include NetworkHelper
 
-  #def application(application, didFinishLaunchingWithOptions:launchOptions)
-  #  application.setStatusBarStyle(UIStatusBarStyleBlackOpaque)
-  #  @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-  #  @window.rootViewController = FlashViewController.alloc.init
-  #  application.setStatusBarHidden(true, withAnimation:UIStatusBarAnimationFade)
-  #  @window.rootViewController.wantsFullScreenLayout = true
-  #  @window.makeKeyAndVisible
-  #  true
-  #end
+  def application(application, didFinishLaunchingWithOptions:launchOptions)
+    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+
+    application.setStatusBarHidden(true, withAnimation:UIStatusBarAnimationNone)
+    show_flash
+
+    @window.makeKeyAndVisible
+
+    true
+  end
+
+  def show_flash
+    @image_view = UIImageView.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+    @image_view.animationImages = ['kaiji-2.jpg'.uiimage, 'kaiji-3.jpg'.uiimage, 'kaiji-1.jpg'.uiimage]
+    @image_view.animationDuration = 16.0
+    @image_view.animationRepeatCount = 100
+    @image_view.startAnimating
+
+    @tap = UITapGestureRecognizer.alloc.initWithTarget(self, action: :'handleTapGesture:')
+    @window.addGestureRecognizer(@tap)
+    @window.addSubview @image_view
+    @window.bringSubviewToFront(@image_view)
+  end
+
+  def dismiss_flash
+    return unless @image_view
+    @image_view.removeFromSuperview
+    @image_view = nil
+    @window.removeGestureRecognizer(@tap)
+    @window.rootViewController = storyboard.instantiateInitialViewController
+    @window.rootViewController.wantsFullScreenLayout = true
+  end
+
+  def handleTapGesture(sender)
+    dismiss_flash
+  end
 
   def initialize
     @internetReachable = Reachability.reachabilityForInternetConnection
