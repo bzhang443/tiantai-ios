@@ -12,7 +12,7 @@ props = AppProperties.new
 Motion::Project::App.setup do |app|
   app.name = 'TianTai'
   app.icons = %w(Icon.png Icon@2x.png)
-  app.version = '1.0'
+  app.version = props.app_version
   app.deployment_target = '6.0'
   app.interface_orientations = [:portrait]
   app.info_plist['CFBundleDisplayName'] = '天泰温泉'
@@ -28,9 +28,9 @@ Motion::Project::App.setup do |app|
     pod 'MBProgressHUD'
   end
 
-  app.provisioning_profile = 'team.mobileprovision'
-  app.codesign_certificate = 'Bison Zhang'
-  app.identifier = 'com.golftime.tiantai'
+  app.provisioning_profile = props.app_provision
+  app.codesign_certificate = props.app_codesign
+  app.identifier = props.app_identifier
 
   app.development do
     app.entitlements['get-task-allow'] = true

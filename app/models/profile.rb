@@ -40,12 +40,19 @@ class Profile
   def self.device_signup
     return if App::Persistence['token']
 
+    props = AppProperties.new
     device_model = 'iphone' if Device.iphone?
     device_model = 'ipad' if Device.ipad?
     device_model = 'simulator' if Device.simulator?
     device_model += '-retina' if Device.retina?
     device_model += "(#{Device.screen.width}x#{Device.screen.height})"
-    data = {:did=>BubbleWrap.create_uuid, :model=>device_model, :os=>Device.ios_version, :version=>'1.0', :source=>'AppStore'}
+    data = {
+        :did     => Device.identifierForVendor.UUIDString,
+        :model   => device_model,
+        :os      => Device.ios_version,
+        :version => props.app_version,
+        :source  => props.app_source
+    }
     puts "device signup with did=#{data[:did]} and model=#{data[:model]}"
 
     BW::HTTP.post(App.delegate.api_for('sign_up'), {payload: data}) do |response|
