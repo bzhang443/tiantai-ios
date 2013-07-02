@@ -16,7 +16,12 @@ class PriceListViewController <  Nitron::ViewController
   end
 
   on :callButton do
-    App.open_url 'telprompt://053286579888'
+    if App.shared.canOpenURL('tel://'.nsurl)
+      App.open_url 'telprompt://053286579888'
+    else
+      App.alert '您的设备不支持电话呼叫'
+    end
+
   end
 
 end
