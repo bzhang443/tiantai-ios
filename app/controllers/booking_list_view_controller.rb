@@ -4,16 +4,18 @@ class BookingListViewController < Nitron::TableViewController
   def viewDidLoad
     super
 
+    class << view.dataSource
+      def tableView(tableView, titleForHeaderInSection:section)
+        '　时间 　　　　名称　　　  状态'
+      end
+    end
+
     view.addPullToRefreshWithActionHandler(lambda {
       Booking.refresh
       view.pullToRefreshView.stopAnimating
     })
 
-    #unless Booking.first
-    #  puts 'No college data, pull to refresh...'
-      view.triggerPullToRefresh
-    #end
+    view.triggerPullToRefresh
   end
-
 
 end

@@ -7,3 +7,4 @@ build
 resources/*.storyboardc
 resources/*.momd
 vendor/Pods
+lib/app_properties.rb
