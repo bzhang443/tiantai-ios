@@ -1,6 +1,6 @@
 class News < Nitron::Model
   def self.all
-    order('id')
+    order('id', ascending: false)
   end
 
   def self.refresh
@@ -14,7 +14,6 @@ class News < Nitron::Model
   end
 
   def logo_image
-    #puts "get logo_image from #{self.logo}"
     App.delegate.get_image(self.logo) do |image|
       @logo_image = image
     end

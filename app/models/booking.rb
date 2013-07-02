@@ -16,7 +16,7 @@ class Booking < Nitron::Model
   end
 
   def self.all
-    order('order_id')
+    order('order_id', ascending: false)
   end
 
   def self.refresh
