@@ -41,11 +41,47 @@ class TipsViewController < UIViewController
     self.view = view
   end
 
+
   def viewForScrollView(scroll, Page:index)
+    v = UIView.alloc.initWithFrame @bounds
+
     img = UIImageView.alloc.initWithFrame(@bounds)
     img.contentMode = UIViewContentModeScaleToFill
     img.image = FW_FILES[index].uiimage
-    img
+    v << img
+
+    left = UIButton.buttonWithType(UIButtonTypeCustom)
+    left.userInteractionEnabled = true
+    left.setFrame [[0, 218], [23, 46]]
+    left.setBackgroundImage('arrow-left'.uiimage, forState: UIControlStateNormal)
+    left.when(UIControlEventTouchUpInside) do
+      index = self.view.currentPage - 1
+      index = FW_FILES.size - 1 if index < 0
+      view.displayPage index
+    end
+    v << left
+
+    right = UIButton.buttonWithType(UIButtonTypeCustom)
+    right.userInteractionEnabled = true
+    right.setFrame [[297, 218], [23, 46]]
+    right.setBackgroundImage('arrow-right'.uiimage, forState: UIControlStateNormal)
+    right.when(UIControlEventTouchUpInside) do
+      index = self.view.currentPage + 1
+      index = 0 if index > FW_FILES.size - 1
+      view.displayPage index
+    end
+    v << right
+
+    v
   end
 
 end
+
+#
+#add property 'currentPage' to ISPageScrollView
+#@property (nonatomic, readonly) NSInteger currentPage;
+#
+#which is set in last line of
+#- (void)setupScrollViewForDisplayingPage:(NSInteger)pageIndex
+#to take the value of pageIndex
+# _currentPage = pageIndex;
