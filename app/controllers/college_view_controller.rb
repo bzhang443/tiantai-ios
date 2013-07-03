@@ -15,7 +15,7 @@ class CollegeViewController < Nitron::ViewController
   end
 
   def controllerDidChangeContent(controller)
-    tableView.reloadData()
+    tableView.reloadData
   end
 
   def dataSource
@@ -37,7 +37,7 @@ class CollegeViewController < Nitron::ViewController
     end
   end
 
-protected
+private
   class CoreDataSource
     def initWithRequest(request, owner:owner)
       if init

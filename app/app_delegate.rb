@@ -52,7 +52,8 @@ class AppDelegate
 
     UINavigationBar.appearance.setBackgroundImage('top'.uiimage, forBarMetrics: UIBarMetricsDefault)
     #UIBarButtonItem.appearance.setBackButtonBackgroundImage('navi_back'.uiimage, forState: UIControlStateNormal, barMetrics: UIBarMetricsDefault)
-    #UIBarButtonItem.appearance.setTintColor UIColor.darkGrayColor
+    UIBarButtonItem.appearance.setTintColor [57,92,14].uicolor
+
     #title_text_attr = {
     #    'UITextAttributeTextColor'       => UIColor.greenColor,
     #    'UITextAttributeTextShadowColor' => UIColor.blackColor,
