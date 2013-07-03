@@ -1,4 +1,4 @@
-class TipsViewController < UIViewController
+class TipsViewController < Nitron::ViewController
   FW_FILES = %w(
     fw-c1.jpg
     fw-c2.jpg
@@ -30,49 +30,35 @@ class TipsViewController < UIViewController
   )
 
   def viewDidLoad
+    super
+
     @bounds = self.view.bounds
     @bounds.size.height -= 44   # dirty job, eh?
 
-    view = ISPageScrollView.alloc.initWithFrame(self.view.bounds)
-    view.dataSource = self
-    view.numberOfPages = FW_FILES.size - 1  # buggy
-    view.numberOfReusableViews = 5
-    view.displayPage(0)
-    self.view = view
+    scroller.dataSource = self
+    scroller.numberOfPages = FW_FILES.size - 1  # buggy
+    scroller.numberOfReusableViews = 5
+    scroller.displayPage 0
   end
 
 
   def viewForScrollView(scroll, Page:index)
-    v = UIView.alloc.initWithFrame @bounds
-
     img = UIImageView.alloc.initWithFrame(@bounds)
     img.contentMode = UIViewContentModeScaleToFill
     img.image = FW_FILES[index].uiimage
-    v << img
+    img
+  end
 
-    left = UIButton.buttonWithType(UIButtonTypeCustom)
-    left.userInteractionEnabled = true
-    left.setFrame [[0, 218], [23, 46]]
-    left.setBackgroundImage('arrow-left'.uiimage, forState: UIControlStateNormal)
-    left.when(UIControlEventTouchUpInside) do
-      index = self.view.currentPage - 1
-      index = FW_FILES.size - 1 if index < 0
-      view.displayPage index
-    end
-    v << left
+  on :leftButton do
+    index = scroller.currentPage - 1
+    index = FW_FILES.size - 1 if index < 0
+    scroller.displayPage index
+  end
 
-    right = UIButton.buttonWithType(UIButtonTypeCustom)
-    right.userInteractionEnabled = true
-    right.setFrame [[297, 218], [23, 46]]
-    right.setBackgroundImage('arrow-right'.uiimage, forState: UIControlStateNormal)
-    right.when(UIControlEventTouchUpInside) do
-      index = self.view.currentPage + 1
-      index = 0 if index > FW_FILES.size - 1
-      view.displayPage index
-    end
-    v << right
-
-    v
+  on :rightButton do
+    index = scroller.currentPage + 1
+    index = 0 if index > FW_FILES.size - 1
+    scroller.displayPage index
   end
 
 end

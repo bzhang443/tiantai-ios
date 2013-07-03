@@ -1,15 +1,10 @@
-class HomeViewController < UIViewController
+class HomeViewController < Nitron::ViewController
 
   HALF_PI = 1.57079632679489661923132169163975144
 
   def viewDidLoad
     super
     App.shared.statusBarStyle = UIStatusBarStyleBlackOpaque   # supposed to do in AppDelegate
-
-    @curtain = UIView.alloc.initWithFrame(view.bounds)
-    @curtain.backgroundColor = UIColor.darkGrayColor.colorWithAlphaComponent(0.6)
-    @curtain.hide
-    view << @curtain
 
     menu_y = self.view.bounds.size.height - 210
     @menu = QuadCurveMenu.alloc.initWithFrame([[160,menu_y],[210,210]], withArray:['1', '2', '3'])
@@ -43,15 +38,15 @@ class HomeViewController < UIViewController
         self.performSegueWithIdentifier('ShowNews', sender: self)
     end
 
-    @curtain.hide
+    curtain.hide
   end
 
   def quadCurveMenuWillExpand(menu)
-    @curtain.show
+    curtain.show
   end
 
   def quadCurveMenuDidClose(menu)
-    @curtain.hide
+    curtain.hide
   end
 
 end
