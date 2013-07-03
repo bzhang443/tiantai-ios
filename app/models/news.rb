@@ -1,4 +1,6 @@
 class News < Nitron::Model
+  #attr_accessor :ui_delegate
+
   def self.all
     order('id', ascending: false)
   end
@@ -11,13 +13,6 @@ class News < Nitron::Model
         News.create(data)
       }
     end
-  end
-
-  def logo_image
-    App.delegate.get_image(self.logo) do |image|
-      @logo_image = image
-    end
-    @logo_image || 'placeholder'.uiimage
   end
 
 end

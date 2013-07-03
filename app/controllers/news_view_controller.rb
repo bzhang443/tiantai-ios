@@ -15,4 +15,9 @@ class NewsViewController < Nitron::TableViewController
     end
   end
 
+  def tableView(tableView, willDisplayCell:cell, forRowAtIndexPath:indexPath)
+    model = tableView.dataSource.objectAtIndexPath(indexPath)
+    logo_image = cell.viewWithTag(1)
+    logo_image.setImageWithURL(model.logo, placeholderImage:App.delegate.placeholder_image)
+  end
 end

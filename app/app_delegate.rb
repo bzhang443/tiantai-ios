@@ -71,4 +71,8 @@ class AppDelegate
           completed:lambda {|image, error, type, finished| block.call(image)}
     )
   end
+
+  def placeholder_image
+    'placeholder'.uiimage
+  end
 end

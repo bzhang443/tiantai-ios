@@ -276,12 +276,9 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="dataBinding" value="model.title"/>
                                             </userDefinedRuntimeAttributes>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="placeholder.png" id="J7Y-5X-qCI">
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" image="placeholder.png" id="J7Y-5X-qCI">
                                             <rect key="frame" x="9" y="20" width="75" height="75"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="dataBinding" value="model.logo_image"/>
-                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -848,12 +845,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="placeholder.png" id="HGf-fL-lq6">
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" image="placeholder.png" id="HGf-fL-lq6">
                                             <rect key="frame" x="11" y="12" width="88" height="88"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="dataBinding" value="model.logo_image"/>
-                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5hy-3a-VVi">
                                             <rect key="frame" x="115" y="12" width="185" height="21"/>
@@ -1568,9 +1562,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="profile-male.jpg" width="42" height="42"/>
         <image name="profile-name.jpg" width="42" height="42"/>
         <image name="profile-tel.jpg" width="42" height="42"/>
-        <image name="wedding-1.jpg" width="525" height="192"/>
-        <image name="wedding-2.jpg" width="525" height="192"/>
-        <image name="wedding-3.jpg" width="525" height="192"/>
+        <image name="wedding-1.jpg" width="523" height="190"/>
+        <image name="wedding-2.jpg" width="523" height="190"/>
+        <image name="wedding-3.jpg" width="523" height="190"/>
         <image name="wedding-4.jpg" width="525" height="192"/>
     </resources>
     <classes>
@@ -1607,6 +1601,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kPZ-It-uvT"/>
+        <segue reference="Cmc-pf-IpL"/>
     </inferredMetricsTieBreakers>
 </document>

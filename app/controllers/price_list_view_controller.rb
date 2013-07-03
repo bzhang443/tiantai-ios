@@ -7,12 +7,8 @@ class PriceListViewController <  Nitron::ViewController
       scroller.pullToRefreshView.stopAnimating
     })
 
-    if Price.first
-      self.model = Price.new
-    else
-      puts 'No price data, pull to refresh...'
-      scroller.triggerPullToRefresh
-    end
+    self.model = Price.new if Price.first
+    scroller.triggerPullToRefresh
   end
 
   on :callButton do
@@ -21,7 +17,6 @@ class PriceListViewController <  Nitron::ViewController
     else
       App.alert '您的设备不支持电话呼叫'
     end
-
   end
 
 end
