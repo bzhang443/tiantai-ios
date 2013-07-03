@@ -6,6 +6,11 @@ class HomeViewController < UIViewController
     super
     App.shared.statusBarStyle = UIStatusBarStyleBlackOpaque   # supposed to do in AppDelegate
 
+    @curtain = UIView.alloc.initWithFrame(view.bounds)
+    @curtain.backgroundColor = UIColor.darkGrayColor.colorWithAlphaComponent(0.6)
+    @curtain.hide
+    view << @curtain
+
     menu_y = self.view.bounds.size.height - 210
     @menu = QuadCurveMenu.alloc.initWithFrame([[160,menu_y],[210,210]], withArray:['1', '2', '3'])
     dir = QuadCurveRadialDirector.alloc.initWithMenuWholeAngle(HALF_PI, andInitialRotation:-1*HALF_PI)
@@ -30,15 +35,23 @@ class HomeViewController < UIViewController
 
   def quadCurveMenu(menu, didTapMenuItem: item)
     case item.dataObject
-      when '1'  #setting
+      when '1'
         self.performSegueWithIdentifier('ShowSetting', sender: self)
       when '2'
         self.performSegueWithIdentifier('ShowBooking', sender: self)
       when '3'
         self.performSegueWithIdentifier('ShowNews', sender: self)
-      else
-        puts "What for #{item.dataObject}?"
     end
+
+    @curtain.hide
+  end
+
+  def quadCurveMenuWillExpand(menu)
+    @curtain.show
+  end
+
+  def quadCurveMenuDidClose(menu)
+    @curtain.hide
   end
 
 end
