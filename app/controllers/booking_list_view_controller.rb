@@ -6,7 +6,11 @@ class BookingListViewController < Nitron::TableViewController
 
     class << view.dataSource
       def tableView(tableView, titleForHeaderInSection:section)
-        '　时间 　　　　名称　　　  状态'
+        if Booking.first
+          '　时间 　　　　名称　　　  状态'
+        else
+          '  还没有订场记录'
+        end
       end
     end
 

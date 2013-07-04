@@ -1,11 +1,9 @@
 class News < Nitron::Model
-  #attr_accessor :ui_delegate
-
   def self.all
     order('id', ascending: false)
   end
 
-  def self.refresh
+  def self.refresh(&block)
     App.delegate.api_get('news_list') do |json|
       self.all.to_a.each { |record| record.destroy }
       json[:list].each { |record|
@@ -13,6 +11,7 @@ class News < Nitron::Model
         News.create(data)
       }
     end
+    block.call if block_given?
   end
 
 end

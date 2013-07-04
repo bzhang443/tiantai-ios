@@ -26,7 +26,6 @@ Motion::Project::App.setup do |app|
     pod 'TPKeyboardAvoiding'
     pod 'CEPopupPickerView'
     pod 'SDWebImage'
-    pod 'MBProgressHUD'
   end
 
   app.provisioning_profile = props.app_provision

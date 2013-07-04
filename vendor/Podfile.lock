@@ -10,7 +10,6 @@ PODS:
   - libwebp/dsp (0.3.0-rc7)
   - libwebp/utils (0.3.0-rc7)
   - libwebp/webp (0.3.0-rc7)
-  - MBProgressHUD (0.7)
   - QuadCurveMenu (0.0.1)
   - Reachability (3.1.0)
   - SDWebImage (3.3):
@@ -24,7 +23,6 @@ PODS:
 DEPENDENCIES:
   - CEPopupPickerView
   - ISPageScrollView
-  - MBProgressHUD
   - QuadCurveMenu
   - Reachability
   - SDWebImage
@@ -35,7 +33,6 @@ SPEC CHECKSUMS:
   CEPopupPickerView: 5e4eb8b0cfd28a741bcc9f38a4a13814aaba92a2
   ISPageScrollView: c612fe70f7bf4f25a7475e894dd9ee258352fd4f
   libwebp: 40517fa1fd3716eded73b4696c45fc0b66e4b414
-  MBProgressHUD: 1fd8591a2216d5dec6de24e09187bb03bcbe9946
   QuadCurveMenu: 339756b3178e381fea80e424f8edc1b10af554c8
   Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
   SDWebImage: 79a8bac9ccf85b269100b294f7b43684dab8bf8a
