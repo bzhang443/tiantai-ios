@@ -15,8 +15,9 @@ class BookingListViewController < Nitron::TableViewController
     end
 
     view.addPullToRefreshWithActionHandler(lambda {
-      Booking.refresh
-      view.pullToRefreshView.stopAnimating
+      Booking.refresh {
+        view.pullToRefreshView.stopAnimating
+      }
     })
 
     view.triggerPullToRefresh

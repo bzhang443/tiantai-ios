@@ -10,8 +10,9 @@ class News < Nitron::Model
         data = {:title=>record[:title], :logo=>record[:logo], :link=>record[:link], :id=>record[:id] }
         News.create(data)
       }
+
+      block.call if block
     end
-    block.call if block_given?
   end
 
 end

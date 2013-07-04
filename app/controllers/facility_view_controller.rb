@@ -5,8 +5,9 @@ class FacilityViewController < Nitron::TableViewController
     super
 
     view.addPullToRefreshWithActionHandler(lambda {
-      Facility.refresh
-      view.pullToRefreshView.stopAnimating
+      Facility.refresh {
+        view.pullToRefreshView.stopAnimating
+      }
     })
 
     unless Facility.first

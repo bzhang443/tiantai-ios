@@ -3,8 +3,10 @@ class PriceListViewController <  Nitron::ViewController
     super
 
     scroller.addPullToRefreshWithActionHandler(lambda {
-      Price.refresh { self.model = Price.new }
-      scroller.pullToRefreshView.stopAnimating
+      Price.refresh {
+        scroller.pullToRefreshView.stopAnimating
+        self.model = Price.new
+      }
     })
 
     self.model = Price.new if Price.first

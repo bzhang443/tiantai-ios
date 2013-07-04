@@ -9,8 +9,6 @@ class NewsViewController < Nitron::TableViewController
         view.pullToRefreshView.stopAnimating
       }
     })
-    view.pullToRefreshView.setTitle('下拉刷新', forState:SVPullToRefreshStateStopped)
-    view.pullToRefreshView.setTitle('放手刷新', forState:SVPullToRefreshStateTriggered)
 
     unless News.first
       puts 'No news data, pull to refresh...'

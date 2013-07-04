@@ -4,8 +4,9 @@ class CollegeViewController < Nitron::ViewController
     tableView.dataSource = dataSource
 
     tableView.addPullToRefreshWithActionHandler(lambda {
-      College.refresh
-      tableView.pullToRefreshView.stopAnimating
+      College.refresh {
+        tableView.pullToRefreshView.stopAnimating
+      }
     })
 
     unless College.first

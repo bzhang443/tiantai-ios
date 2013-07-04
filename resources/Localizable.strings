@@ -1,0 +1,10 @@
+/* Localized versions of Info.plist keys */
+/* SVPullToRefresh
+        self.titles = [NSMutableArray arrayWithObjects:NSLocalizedString(@"Pull to refresh...",),
+                                                       NSLocalizedString(@"Release to refresh...",),
+                                                       NSLocalizedString(@"Loading...",),
+                                                       nil];
+*/
+"Pull to refresh..." = "下拉刷新...";
+"Release to refresh..." = "放手刷新...";
+"Loading..." = "加载中...";

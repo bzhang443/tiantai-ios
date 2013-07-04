@@ -19,7 +19,7 @@ class Booking < Nitron::Model
     order('order_id', ascending: false)
   end
 
-  def self.refresh
+  def self.refresh(&block)
     App.delegate.api_get("booking_history?token=#{Profile.token}") do |json|
       self.all.to_a.each { |record| record.destroy }
       json[:list].each { |record|
@@ -34,6 +34,7 @@ class Booking < Nitron::Model
         }
         Booking.create(data)
       }
+      block.call if block
     end
   end
 
