@@ -35,8 +35,4 @@ Motion::Project::App.setup do |app|
   app.development do
     app.entitlements['get-task-allow'] = true
   end
-
-  app.testflight.sdk = 'vendor/TestFlight'
-  app.testflight.api_token = props.testflight_apitoken
-  app.testflight.team_token = props.testflight_teamtoken
 end

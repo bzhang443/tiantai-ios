@@ -10,16 +10,21 @@ class ProfileViewController <  Nitron::ViewController
   end
 
   on :save do
-    profile = Profile.new
-    profile.name = nameField.text
-    profile.mobile = mobileField.text
-    profile.company = companyField.text
-    profile.title = titleField.text
-    profile.handicap = handicapField.text
-    profile.gender = self.model.gender
-    Profile.save(profile)
-    self.delegate.on_profile_changed(profile)
-    UIAlertView.alert "个人信息保存成功" { self.navigationController.popViewControllerAnimated(false) }
+    name = nameField.text
+    if name.to_s.strip.length == 0
+      App.alert '您的名字没填'
+    else
+      profile = Profile.new
+      profile.name = name
+      profile.mobile = mobileField.text
+      profile.company = companyField.text
+      profile.title = titleField.text
+      profile.handicap = handicapField.text
+      profile.gender = self.model.gender
+      Profile.save(profile)
+      self.delegate.on_profile_changed(profile)
+      UIAlertView.alert '个人信息保存成功' { self.navigationController.popViewControllerAnimated(false) }
+    end
   end
 
   on :maleButton do
