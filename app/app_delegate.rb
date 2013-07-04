@@ -18,7 +18,7 @@ class AppDelegate
     @application.setStatusBarHidden(true, withAnimation:UIStatusBarAnimationNone)
 
     @image_view = UIImageView.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @image_view.animationImages = ['kaiji-2.jpg'.uiimage, 'kaiji-3.jpg'.uiimage, 'kaiji-1.jpg'.uiimage]
+    @image_view.animationImages = ['kaiji-1.jpg'.uiimage, 'kaiji-2.jpg'.uiimage, 'kaiji-3.jpg'.uiimage]
     @image_view.animationDuration = 16.0
     @image_view.animationRepeatCount = 100
     @image_view.startAnimating

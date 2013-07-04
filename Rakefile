@@ -16,6 +16,7 @@ Motion::Project::App.setup do |app|
   app.deployment_target = '6.0'
   app.interface_orientations = [:portrait]
   app.info_plist['CFBundleDisplayName'] = '天泰温泉'
+  #app.info_plist['UILaunchImageFile'] = 'kaiji-1.jpg'  # smaller? can't get approved?
   app.files += Dir.glob("./lib/**/*.rb")
 
   app.pods do
