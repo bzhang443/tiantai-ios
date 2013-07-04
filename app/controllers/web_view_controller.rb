@@ -3,7 +3,7 @@ class WebViewController < UIViewController
 
   def viewDidLoad
     self.title = self.model.title
-    request = NSURLRequest.requestWithURL(NSURL.alloc.initWithString(self.model.link))
+    request = NSURLRequest.requestWithURL(self.model.link.nsurl)
     self.view.loadRequest(request)
   end
 end

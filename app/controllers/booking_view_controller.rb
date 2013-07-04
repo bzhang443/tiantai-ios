@@ -43,7 +43,7 @@ class BookingViewController < Nitron::ViewController
       App.alert '姓名和联系电话必须填'
     else
       Booking.add(data) do
-        UIAlertView.alert '您的订场已经提交' { self.navigationController.popViewControllerAnimated(false) }
+        UIAlertView.alert '您的订场已经提交' { self.navigationController.pop }
       end
     end
   end

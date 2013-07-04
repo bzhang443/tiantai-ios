@@ -23,7 +23,7 @@ class ProfileViewController <  Nitron::ViewController
       profile.gender = self.model.gender
       Profile.save(profile)
       self.delegate.on_profile_changed(profile)
-      UIAlertView.alert '个人信息保存成功' { self.navigationController.popViewControllerAnimated(false) }
+      UIAlertView.alert '个人信息保存成功' { self.navigationController.pop }
     end
   end
 
