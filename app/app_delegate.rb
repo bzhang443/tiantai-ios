@@ -51,15 +51,9 @@ class AppDelegate
     @hostReachable.startNotifier
 
     UINavigationBar.appearance.setBackgroundImage('top'.uiimage, forBarMetrics: UIBarMetricsDefault)
-    #UIBarButtonItem.appearance.setBackButtonBackgroundImage('navi_back'.uiimage, forState: UIControlStateNormal, barMetrics: UIBarMetricsDefault)
-    UIBarButtonItem.appearance.setTintColor [57,92,14].uicolor
+    UIBarButtonItem.appearance.setTintColor [101,125,24].uicolor(0.3)
+    App.shared.statusBarStyle = UIStatusBarStyleBlackOpaque
 
-    #title_text_attr = {
-    #    'UITextAttributeTextColor'       => UIColor.greenColor,
-    #    'UITextAttributeTextShadowColor' => UIColor.blackColor,
-    #    'UITextAttributeTextShadowOffset'=> NSValue.valueWithUIOffset(UIOffsetMake(-1,0))
-    #    }
-    #UIBarButtonItem.appearance.setTitleTextAttributes(title_text_attr, forState: UIControlStateNormal)
   end
 
   def network_reachable?
