@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-875" y="1243"/>
+            <point key="canvasLocation" x="-1183" y="1171"/>
         </scene>
         <!--Setting View Controller - 个人信息-->
         <scene sceneID="NCX-c8-jdj">
@@ -299,7 +299,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euo-RN-udM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="307" y="-1389"/>
+            <point key="canvasLocation" x="219" y="-1485"/>
         </scene>
         <!--Price List View Controller - 订场-->
         <scene sceneID="d5m-NA-CFV">
@@ -410,7 +410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZt-Hy-YNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610" y="3119"/>
+            <point key="canvasLocation" x="602" y="3351"/>
         </scene>
         <!--Booking View Controller - 在线订场-->
         <scene sceneID="4K2-Tg-PUW">
@@ -671,7 +671,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEF-P4-jij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="3119"/>
+            <point key="canvasLocation" x="1224" y="3375"/>
         </scene>
         <!--Home View Controller - 天泰温泉高尔夫俱乐部-->
         <scene sceneID="Wpj-11-Rzw">
@@ -752,7 +752,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlY-NC-feT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-488" y="-101"/>
+            <point key="canvasLocation" x="-648" y="1163"/>
         </scene>
         <!--View Controller - 球场简介-->
         <scene sceneID="2Y0-mb-5rK">
@@ -898,18 +898,24 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1424" y="-732"/>
         </scene>
-        <!--View Controller - 地图-->
+        <!--Course Map View Controller - 地图-->
         <scene sceneID="rfw-l4-OLO">
             <objects>
-                <viewController id="RjU-WW-luL" sceneMemberID="viewController">
+                <viewController id="RjU-WW-luL" customClass="CourseMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X50-pG-JQg">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="course-map.jpg" id="nNv-u8-kGS">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="lyM-4N-Lce">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="outlet" value="mapView"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="RjU-WW-luL" id="52O-PM-No2"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1042,7 +1048,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgc-Da-amn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="-1496"/>
+            <point key="canvasLocation" x="1782" y="-1908"/>
         </scene>
         <!--Feedback View Controller - 意见反馈-->
         <scene sceneID="gyM-Mg-STE">
@@ -1424,7 +1430,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAb-Da-Z44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727" y="826"/>
+            <point key="canvasLocation" x="743" y="1154"/>
         </scene>
         <!--Profile View Controller - 个人信息编辑-->
         <scene sceneID="Fj7-gT-glQ">
@@ -1586,7 +1592,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="college-top.png" width="532" height="197"/>
         <image name="course-brief.jpg" width="535" height="351"/>
         <image name="course-contact.jpg" width="591" height="168"/>
-        <image name="course-map.jpg" width="640" height="748"/>
         <image name="course-tips.png" width="228" height="69"/>
         <image name="course-utils.png" width="228" height="69"/>
         <image name="course-view-1.jpg" width="525" height="192"/>
