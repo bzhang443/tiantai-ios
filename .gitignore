@@ -2,7 +2,7 @@
 .idea
 .repl_history
 .dat*
-team.mobileprovision
+*.mobileprovision
 build
 resources/*.storyboardc
 resources/*.momd
